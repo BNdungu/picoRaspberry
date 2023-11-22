@@ -37,9 +37,12 @@ int main(){
                 printf(">");
             }
         }
-
-
+        
+        if(stdio_is_rx_ready()){
+            c = getchar();
+            write(c);
+            if(c=="\n"){
+                printf(">");
+            }
     }
-
-
 }
